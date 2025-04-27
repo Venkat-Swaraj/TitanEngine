@@ -1,0 +1,27 @@
+﻿<Window x:Class="TitanEditor.GameProject.ProjectBrowserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TitanEditor.GameProject"
+        mc:Ignorable="d"
+        Title="Project Browser" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <ToggleButton x:Name="OpenProjectButton" FontSize="32" IsChecked="True" Click="OpenToggleButton_Click"> Open Project</ToggleButton>
+            <ToggleButton x:Name="CreateProjectButton" FontSize="32" Margin="30,0,0,0" Click="OpenToggleButton_Click"> Create Project</ToggleButton>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" x:Name="projectBrowser">
+            <Border Width="800" Background="BlueViolet">
+                <TextBlock FontSize="72">Open Project</TextBlock>
+            </Border>
+            <Border Width="800" Background="Red">
+                <TextBlock FontSize="72">Create Project</TextBlock>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
